@@ -5,40 +5,45 @@ public class Potager
     public enum Meteo { pluvieux, soleil }
     public Meteo meteo;
     public int chanceVisite;
-    public Potager(int place,int chanceVisite){
-        this.place=place;
-        for (int i=1;i==place;i++){
-            terrains.add(CreeTerrain);
+    public Potager(int place, int chanceVisite)
+    {
+        this.place = place;
+        terrains = [];
+        for (int i = 1; i <= place; i++)
+        {
+            terrains.Add(CreeTerrain());
         }
-        this.chanceVisite=chanceVisite;
-        
-    }
-    public Terrain CreeTerrain(){
-       Random rng = new Random();
-       int tirage=rng.next(1,5);
-       if (tirage==1){
-        return new TerrainDesert();
-       }
-       if (tirage==2){
-        return new TerrainForet();
-       }
-       if (tirage==3){
-        return new TerrainPlain();
-       }
-       if (tirage==4){
-        return new TerrainGlace();
-       }
-       else
-       {
-        return null;
-       }
+        this.chanceVisite = chanceVisite;
 
     }
-    public override string ToString(){
-        string retour="";
-        foreach (Terrain terrain in Terrain)
+    public Terrain CreeTerrain()
+    {
+        Random rng = new Random();
+        int tirage = rng.Next(1, 5);
+        if (tirage == 1)
         {
-            retour+=terrain.ToString;
+            return new TerrainDesert();
+        }
+        if (tirage == 2)
+        {
+            return new TerrainForet();
+        }
+        if (tirage == 3)
+        {
+            return new TerrainPlaine();
+        }
+        else
+        {
+            return new TerrainGlace();
+        }
+
+    }
+    public override string ToString()
+    {
+        string retour = "";
+        foreach (Terrain terrain in terrains)
+        {
+            retour += terrain.ToString();
         }
         return retour;
     }
