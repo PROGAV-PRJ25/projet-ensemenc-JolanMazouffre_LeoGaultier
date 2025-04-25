@@ -32,6 +32,7 @@ public class Joueur
             inventaire[ressource]--;
         }
     }
+    */
     public void Ajouter(Ressource ressource)
     {
         if(!inventaire.ContainsKey(ressource))
@@ -54,13 +55,12 @@ public class Joueur
             inventaire[ressource]=+ nb;
         }
     }
-    */
     public override string ToString()
     {
         string message = $"Argent: {argent} ";
         foreach (KeyValuePair<Ressource, int> rss in inventaire)
         {
-            message += $"Nom ressource: {rss.Key}, amount: {rss.Value}";
+            message += $"| {rss.Key.nom}, amount: {rss.Value} ";
         }
         return message;
     }

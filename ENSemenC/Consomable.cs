@@ -1,7 +1,7 @@
 
-public class Nourriture: Ressource
+public class Consomable: Ressource
 {
-    public Nourriture(string nom, double prix):base(nom,prix){}
+    public Consomable(string nom, double prix):base(nom,prix){}
     public override void Utiliser()
     {
         
