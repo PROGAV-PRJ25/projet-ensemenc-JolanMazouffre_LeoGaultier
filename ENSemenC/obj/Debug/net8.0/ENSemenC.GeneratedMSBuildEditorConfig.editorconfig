@@ -8,10 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ENSemenC
-<<<<<<< HEAD
 build_property.ProjectDir = C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\
-=======
-build_property.ProjectDir = H:\S6\Programmation Avancée\projet-ensemenc-Nalokage\ensemenc\
->>>>>>> c5350f78543e3adb7aa18461fb4a0980e9d6a54c
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

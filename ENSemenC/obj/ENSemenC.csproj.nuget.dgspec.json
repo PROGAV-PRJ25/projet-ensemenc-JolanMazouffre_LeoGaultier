@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
         "packagesPath": "C:\\Users\\Huawei15\\.nuget\\packages\\",
         "outputPath": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\",
-=======
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj": {}
-  },
-  "projects": {
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj",
-        "projectName": "ENSemenC",
-        "projectPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj",
-        "packagesPath": "C:\\Users\\leogaultier\\.nuget\\packages\\",
-        "outputPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\obj\\",
->>>>>>> c5350f78543e3adb7aa18461fb4a0980e9d6a54c
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Huawei15\\AppData\\Roaming\\NuGet\\NuGet.Config"

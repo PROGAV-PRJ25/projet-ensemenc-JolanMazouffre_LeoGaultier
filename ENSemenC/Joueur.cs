@@ -1,66 +1,31 @@
 public class Joueur
 {
     protected double argent;
-    public Dictionary<Ressource, int> inventaire;
-    public Joueur(double argent)
-    {
-        this.argent = argent;
-        this.inventaire = new Dictionary<Ressource, int>();
-    }
+    public Dictionary<string, Ressource> inventaire;
+    public List<Potager> potagers;
+
     public Joueur()
     {
         this.argent = 0;
-        this.inventaire = new Dictionary<Ressource, int>();
+        potagers = [new Potager(4, 30)];
+        inventaire = new Dictionary<string, Ressource> { { "Eau", new Eau(4) } };
     }
-    public void Utiliser(Ressource ressource)
-    {
-        ressource.Utiliser();
-    }
-    /*
-    public void Consommer(Ressource ressource)
-    {
-        if(!inventaire.ContainsKey(ressource))
-        {
-            Console.WriteLine("Pas bien");
-        }
-        else if(inventaire[ressource] == 1)
-        {
-            inventaire.Remove(ressource);
-        }
-        else
-        {
-            inventaire[ressource]--;
-        }
-    }
-    */
+
     public void Ajouter(Ressource ressource)
     {
-        if(!inventaire.ContainsKey(ressource))
-        {
-            inventaire.Add(ressource,1);
-        }
-        else
-        {
-            inventaire[ressource]++;
-        }
+        inventaire.Add(ressource.nom, ressource);
     }
-    public void Ajouter(Ressource ressource, int nb)
+    public void Arroser(Plantes plante)
     {
-        if(!inventaire.ContainsKey(ressource))
-        {
-            inventaire.Add(ressource,nb);
-        }
-        else
-        {
-            inventaire[ressource]=+ nb;
-        }
+        inventaire["Eau"].quantite -= 1;
+        plante.Arroser(30);
     }
     public override string ToString()
     {
         string message = $"Argent: {argent} ";
-        foreach (KeyValuePair<Ressource, int> rss in inventaire)
+        foreach (KeyValuePair<string, Ressource> ressource in inventaire)
         {
-            message += $"| {rss.Key.nom}, amount: {rss.Value} ";
+            message += $"| {ressource.Key}, amount: {ressource.Value.quantite} ";
         }
         return message;
     }
