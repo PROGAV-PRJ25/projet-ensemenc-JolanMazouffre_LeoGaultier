@@ -2,7 +2,32 @@ using System.Diagnostics.CodeAnalysis;
 
 public class Terrain
 {
-    public int nAttribut;
+
     public string[] attribut;
     public string type;
+    public int eauBase;
+    public int lumiereBase;
+    public Plantes? plante;
+    public Terrain(string[] attribut, string type, int eau, int lumiere)
+    {
+        this.attribut = attribut;
+        this.type = type;
+        eauBase = eau;
+        lumiereBase = lumiere;
+
+    }
+    public void Planter(string nom)
+    {
+        switch (nom)
+        {
+            case "Verdichouffe":
+                plante = new Verdichouffe(eauBase, lumiereBase);
+                break;
+
+        }
+    }
+    public override string ToString()
+    {
+        return (plante == null) ? $"{type}/vide" : $"{type}/{plante.nom}";
+    }
 }
