@@ -1,7 +1,10 @@
 
 public class Consomable: Ressource
 {
-    public Consomable(string nom, double prix):base(nom,prix){}
+    public Consomable(string nom, double prixAchat):base(nom,prixAchat)
+    {
+
+    }
     public override void Utiliser()
     {
         

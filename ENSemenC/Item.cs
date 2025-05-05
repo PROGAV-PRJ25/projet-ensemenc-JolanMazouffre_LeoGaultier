@@ -1,6 +1,9 @@
 public class Item: Ressource
 {
-    public Item(string nom, double prix):base(nom,prix){}
+    public Item(string nom, double prixAchat):base(nom,prixAchat)
+    {
+
+    }
     public override void Utiliser()
     {
         

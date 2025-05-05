@@ -1,7 +1,10 @@
 
 public class Ingredient: Ressource
 {
-    public Ingredient(string nom, double prix):base(nom,prix){}
+    public Ingredient(string nom, double prixAchat):base(nom,prixAchat)
+    {
+
+    }
     public override void Utiliser()
     {
         
