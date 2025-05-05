@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+
 
 Jeu jeu = new Jeu();
 for (int i = 0; i < 10; i++)

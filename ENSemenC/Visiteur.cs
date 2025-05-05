@@ -1,5 +1,6 @@
 public abstract class Visiteur
 {
+
     public string nom;
     public Terrain terrainOccupe;
     public Visiteur(string nom, Terrain terrainOccupe)
@@ -9,4 +10,5 @@ public abstract class Visiteur
     }
     public abstract void Action();
     public abstract void ModeReel();
+
 }
