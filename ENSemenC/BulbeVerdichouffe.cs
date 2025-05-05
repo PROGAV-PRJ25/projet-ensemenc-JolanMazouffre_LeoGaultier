@@ -1,6 +1,6 @@
-public class Verdichouffe:Ressource
+public class BulbeVerdichouffe:Ressource
 {
-    public Verdichouffe(string nom, double prixAchat):base(nom,prixAchat)
+    public BulbeVerdichouffe(string nom, double prixAchat):base(nom,prixAchat)
     {
 
     }

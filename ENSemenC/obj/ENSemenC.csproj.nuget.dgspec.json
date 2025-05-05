@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ENSemenC\\ENSemenC.csproj": {}
+    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj": {}
   },
   "projects": {
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ENSemenC\\ENSemenC.csproj": {
+    "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ENSemenC\\ENSemenC.csproj",
+        "projectUniqueName": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj",
         "projectName": "ENSemenC",
-        "projectPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ENSemenC\\ENSemenC.csproj",
+        "projectPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj",
         "packagesPath": "C:\\Users\\leogaultier\\.nuget\\packages\\",
-        "outputPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ENSemenC\\obj\\",
+        "outputPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leogaultier\\AppData\\Roaming\\NuGet\\NuGet.Config"
