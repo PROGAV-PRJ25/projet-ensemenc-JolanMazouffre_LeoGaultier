@@ -1,15 +1,18 @@
 
+using System.Security.Cryptography.X509Certificates;
+
 public abstract class Ressource
 {
-    public string ?nom;
-    public double prixVente;
-    public double prixAchat;
-    public Ressource(string nom, double prixAchat)
+    public string nom;
+    public int prixVente;
+    public int prixAchat;
+    public int quantite;
+    public Ressource(string nom, int prixAchat, int quantite)
     {
         this.nom = nom;
         this.prixAchat = prixAchat;
-        this.prixVente = prixAchat*0.8;
+        prixVente = prixAchat / 2;
+        this.quantite = quantite;
     }
-    public abstract void Utiliser();
-    public abstract void Effet();
+
 }

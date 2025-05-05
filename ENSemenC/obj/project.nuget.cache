@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "JdZsXf1j2R/5g0UFZBmSqCQW8YDwrCX5ir6TIDd2xLZTn8DGKGZ/i2KShXuBsXqTAQy1jksEMtTfBQKbpAYlaw==",
+  "dgSpecHash": "Zj6NL5dTOiI=",
   "success": true,
-  "projectFilePath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-Nalokage\\ensemenc\\ENSemenC.csproj",
+  "projectFilePath": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

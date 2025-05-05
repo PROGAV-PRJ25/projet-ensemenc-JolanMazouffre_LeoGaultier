@@ -13,3 +13,18 @@ H:\S6\Programmation Avancée\projet-ensemenc-Nalokage\ENSemenC\obj\Debug\net8.0\
 H:\S6\Programmation Avancée\projet-ensemenc-Nalokage\ENSemenC\obj\Debug\net8.0\ENSemenC.pdb
 H:\S6\Programmation Avancée\projet-ensemenc-Nalokage\ENSemenC\obj\Debug\net8.0\ENSemenC.genruntimeconfig.cache
 H:\S6\Programmation Avancée\projet-ensemenc-Nalokage\ENSemenC\obj\Debug\net8.0\ref\ENSemenC.dll
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.AssemblyInfoInputs.cache
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.AssemblyInfo.cs
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.csproj.CoreCompileInputs.cache
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.sourcelink.json
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.dll
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\refint\ENSemenC.dll
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.pdb
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\bin\Debug\net8.0\ENSemenC.exe
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\bin\Debug\net8.0\ENSemenC.deps.json
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\bin\Debug\net8.0\ENSemenC.runtimeconfig.json
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\bin\Debug\net8.0\ENSemenC.dll
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\bin\Debug\net8.0\ENSemenC.pdb
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ENSemenC.genruntimeconfig.cache
+C:\code\projet-ensemenc-JolanMazouffre_LeoGaultier\ENSemenC\obj\Debug\net8.0\ref\ENSemenC.dll
