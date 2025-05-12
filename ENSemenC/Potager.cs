@@ -38,6 +38,30 @@ public class Potager
         }
 
     }
+    public List<Terrain> RecupeTerrainLibre()
+    {
+        List<Terrain> retour = [];
+        foreach (Terrain terrain in terrains)
+        {
+            if (terrain.plante == null)
+            {
+                retour.Add(terrain);
+            }
+        }
+        return retour;
+    }
+    public List<Terrain> RecupeTerrainOccupe()
+    {
+        List<Terrain> retour = [];
+        foreach (Terrain terrain in terrains)
+        {
+            if (terrain.plante != null)
+            {
+                retour.Add(terrain);
+            }
+        }
+        return retour;
+    }
     public Terrain TerrainNonVideAleatoire()
     {
         Random rng = new Random();
