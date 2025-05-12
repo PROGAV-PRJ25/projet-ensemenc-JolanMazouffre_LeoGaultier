@@ -15,11 +15,16 @@ public class Joueur
     {
         inventaire.Add(ressource.nom, ressource);
     }
-    public void Arroser(Plantes plante)
+    public void Arroser(Terrain terrain)
     {
         inventaire["Eau"].quantite -= 1;
-        plante.Arroser(30);
+        terrain.plante?.Arroser(30);
     }
+    public void Planter(Terrain terrain, string plante)
+    {
+        terrain.Planter(plante);
+    }
+
     public override string ToString()
     {
         string message = $"Argent: {argent} ";
