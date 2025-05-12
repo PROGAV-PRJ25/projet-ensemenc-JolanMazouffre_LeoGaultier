@@ -4,7 +4,7 @@ public abstract class Monstre : Visiteur
     {
 
     }
-    public override void ModeReel()
+    public override void ModeReel(Joueur joueur)
     {
         Console.WriteLine($"un {nom} visite votre potage !");
         ConsoleKeyInfo input;
