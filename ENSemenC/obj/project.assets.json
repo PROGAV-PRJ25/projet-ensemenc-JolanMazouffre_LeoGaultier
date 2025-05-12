@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Huawei15\\.nuget\\packages\\": {}
+    "C:\\Users\\leogaultier\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
+      "projectUniqueName": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
       "projectName": "ENSemenC",
-      "projectPath": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
-      "packagesPath": "C:\\Users\\Huawei15\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\",
+      "projectPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
+      "packagesPath": "C:\\Users\\leogaultier\\.nuget\\packages\\",
+      "outputPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Huawei15\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\leogaultier\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,16 +64,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\code\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
