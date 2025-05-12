@@ -5,9 +5,11 @@ public class Potager
     public enum Meteo { pluvieux, soleil }
     public Meteo meteo;
     public int chanceVisite;
-    public Potager(int place, int chanceVisite)
+    public List<Ressource> magasinPotager;
+    public Potager(int place, int chanceVisite, List<Ressource> magasinPotager)
     {
         this.place = place;
+        this.magasinPotager = magasinPotager;
         terrains = [];
         for (int i = 1; i <= place; i++)
         {
@@ -73,31 +75,7 @@ public class Potager
         while (terrains[alea].plante == null);
         return terrains[alea];
     }
-    public Annimal AnnimalAleatoire(Terrain terrain)
-    {
-        return new SlimeLumiere(terrain);
-    }
-    public Monstre MonstreAleatoire(Terrain terrain)
-    {
-        return new GobelinTemporel(terrain);
-    }
-    public Visiteur VisiteurAleatoire(Terrain terrain)
-    {
-        Random rng = new Random();
-        int choice = rng.Next(0, 4);
-        if (choice <= 1)
-        {
-            return AnnimalAleatoire(terrain);
-        }
-        if (choice == 2)
-        {
-            return MonstreAleatoire(terrain);
-        }
-        else
-        {
-            return new Marchand(terrain);
-        }
-    }
+
     public bool CheckVisitePossible()
     {
         foreach (Terrain terrain in terrains)
@@ -109,20 +87,7 @@ public class Potager
         }
         return false;
     }
-    public void DeclencheVisite()
-    {
-        if (CheckVisitePossible())
-        {
-            Random rng = new Random();
-            if (rng.Next(0, 101) < chanceVisite)
-            {
-                Terrain terrain = TerrainNonVideAleatoire();
-                Visiteur visiteur = VisiteurAleatoire(terrain);
-                visiteur.ModeReel();
-            }
-        }
 
-    }
     public void CheckMorts()
     {
         foreach (Terrain terrain in terrains)

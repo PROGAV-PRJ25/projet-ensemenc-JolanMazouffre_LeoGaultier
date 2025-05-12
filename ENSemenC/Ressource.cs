@@ -14,5 +14,11 @@ public abstract class Ressource
         prixVente = prixAchat / 2;
         this.quantite = quantite;
     }
+    public virtual void ActionGraine(List<Graine> listGraine) { }
+    public override string ToString()
+    {
+        return $"{nom}  prix : {prixAchat}";
+    }
+
 
 }

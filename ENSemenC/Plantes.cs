@@ -15,10 +15,8 @@ public abstract class Plantes
     protected int lumiereMin;
     protected string[] attributPref;
     protected bool malade;
-    protected int nFruits;
-    protected int nLoot;
-    protected Ressource? fruit;
-    protected Ressource? loot;
+    public Ressource fruit;
+    public Ressource? loot;
 
     public int Eau
     {
@@ -54,7 +52,7 @@ public abstract class Plantes
     }
 
 
-    public Plantes(string nom, bool vivace, int[] tempsDeCroissance, int tempsMax, int vitesseBoire, int soif, int soifMin, int lumiere, int lumiereMin, string[] attributPref, int nFruits, int nLoot, Ressource? fruit, Ressource? loot)
+    public Plantes(string nom, bool vivace, int[] tempsDeCroissance, int tempsMax, int vitesseBoire, int soif, int soifMin, int lumiere, int lumiereMin, string[] attributPref, Ressource fruit, Ressource? loot)
     {
         temps = 0;
         this.vitesseBoire = vitesseBoire;
@@ -69,8 +67,6 @@ public abstract class Plantes
         this.lumiereMin = lumiereMin;
         this.attributPref = attributPref;
         malade = false;
-        this.nFruits = nFruits;
-        this.nLoot = nLoot;
         this.fruit = fruit;
         this.loot = loot;
 
@@ -85,7 +81,7 @@ public abstract class Plantes
     }
     public override string ToString()
     {
-        return $"{nom} : {eau} {lumiere} {temps} {CalculeSurvit()} ";
+        return RecoltePret() ? $"{nom} : eau :{eau} lumière :{lumiere} age :{temps} satisfaction :{CalculeSurvit()} => Prêt à être récolter !" : $"{nom} : eau:{eau} lumière :{lumiere} temps:{temps} satisfaction:{CalculeSurvit()}";
     }
     public int CalculeSurvit()
     {
@@ -125,12 +121,20 @@ public abstract class Plantes
     }
     public bool CalculeMort()
     {
-        if (CalculeSurvit() < 50)
+        if ((CalculeSurvit() < 50) || (temps > tempsMax))
         {
             return true;
         }
         else
             return false;
     }
-
+    public bool RecoltePret()
+    {
+        if (temps < tempsDeCroissance[tempsDeCroissance.Length - 1])
+        {
+            return false;
+        }
+        else
+            return true;
+    }
 }

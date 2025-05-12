@@ -1,24 +1,53 @@
 public class Joueur
 {
-    protected double argent;
+    public int argent;
     public Dictionary<string, Ressource> inventaire;
     public List<Potager> potagers;
 
     public Joueur()
     {
-        this.argent = 0;
-        potagers = [new Potager(4, 30)];
+        this.argent = 200;
+        potagers = [new Potager(4, 30, [new Eau(0), new GraineVerdichouffe(0)])];
         inventaire = new Dictionary<string, Ressource> { { "Eau", new Eau(4) } };
+        Ajouter(new GraineVerdichouffe(3));
     }
-
+    public bool DansInventaireTest(Ressource ressource)
+    {
+        foreach (KeyValuePair<string, Ressource> element in inventaire)
+        {
+            if (ressource.nom == element.Key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public void Ajouter(Ressource ressource)
     {
-        inventaire.Add(ressource.nom, ressource);
+        if (DansInventaireTest(ressource))
+        {
+            inventaire[ressource.nom].quantite += ressource.quantite;
+        }
+        else
+        {
+            inventaire.Add(ressource.nom, ressource);
+        }
     }
     public void Arroser(Terrain terrain)
     {
         inventaire["Eau"].quantite -= 1;
         terrain.plante?.Arroser(30);
+    }
+    public void Recolter(Terrain terrain)
+    {
+        if (terrain.plante != null)
+        {
+            if (terrain.plante.RecoltePret())
+            {
+                Ajouter(terrain.plante.fruit);
+                terrain.plante = null;
+            }
+        }
     }
     public void Planter(Terrain terrain, string plante)
     {
