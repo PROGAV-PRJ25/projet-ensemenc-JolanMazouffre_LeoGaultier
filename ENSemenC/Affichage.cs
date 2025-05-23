@@ -19,7 +19,9 @@ public class Affichage
         Console.WriteLine("▓   ▓▓▓▓▓▓▓   ▓▓▓  ▓   ▓▓▓▓▓▓▓   ▓▓   ▓▓▓▓▓▓▓   ▓▓▓  ▓▓   ▓   ▓▓▓▓▓▓▓   ▓▓▓  ▓   ▓   ▓▓▓▓▓▓▓▓   ▓▓▓▓▓▓");
         Console.WriteLine("▓   ▓▓▓▓▓▓▓   ▓▓▓▓  ▓  ▓   ▓▓▓▓   ▓   ▓▓▓▓▓▓▓   ▓▓▓▓▓▓▓   ▓   ▓▓▓▓▓▓▓   ▓▓▓▓  ▓  ▓▓   ▓▓▓   ▓   ▓▓▓▓▓▓");
         Console.WriteLine("█         █   ██████   ███      ███         █   ███████   █         █   ██████   ████     ███         ");
-        Console.WriteLine("██████████████████████████████████████████████████████████████████████████████████████████████████████");
+        Console.WriteLine("██████████████████████████████████████████████████████████████████████████████████████████████████████ ");
+        Console.WriteLine("Un jeu par : Léo Gaultier et Jolan Mazouffre : copyNOright 2025 \n\n\n");
+        Console.WriteLine("Appuyer sur une touche pour continuer");
         Console.ReadKey();
     }
     public void AfficherIntro()
@@ -91,6 +93,41 @@ public class Affichage
 
         Console.ReadKey();
     }
+    public void Bloque()
+    {
+        Console.Clear();
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠻⢿⣛⣋⠉⠉⠉⠉⠉⠒⠲⠤⣤⢾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢀⡤⠴⠒⠒⠒⠒⠒⠦⢤⣀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠒⠉⠁⠀⠀⠀⠀⠀⠀⠀⡴⡱⣿⠦⡀⠀⢀⠤⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⢀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠦⡉⠒⣺⠭⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡜⡑⠀⡿⠀⠈⠞⠁⡘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠎⡰⠁⠸⡇⠀⠀⡀⡰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀      Eh bah alors !?? ");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠋⠀⠀⣀⣠⠄⠒⠈⠀⠀⠀⠀⠀⠀⢠⠏⠀⠁⠉⠀⠈⠛⢥⣠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       On est bloqué !?");
+        Console.WriteLine("⠀⠀⠀⠀⠀⢸⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⡰⠁⡠⠖⠋⢠⠃⠀⠀⠀⠀⠀⠀⠀⢀⢔⡏⠀⠀⠀⠀⠸⣷⠠⡀⠙⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       Plus de graine à planter !?");
+        Console.WriteLine("⠀⠀⣠⠔⠋⠉⠀⠀⠀⠈⠉⠙⠒⠦⣄⡀⢠⢣⠊⠀⠀⢀⠆⠀⠀⠀⢀⠊⠀⢠⢁⡎⡸⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠘⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀        Plus de plante pour attiré un marchand !?");
+        Console.WriteLine("⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡿⣅⠀⠀⠀⡼⠀⠀⢀⡔⠁⠀⣠⡇⡞⢸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠩⣒⠄⠀⠀⠀⠀⠀⠀⠀⠀  ");
+        Console.WriteLine("⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡀⠀⡇⠀⢠⡞⠀⢀⠔⢹⡎⠀⡞⠀⠀⠀⠀⠀⠀⢠⡒⠒⠷⠿⠷⠒⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀      PTDR ! Tu me fait marrer toi ! ");
+        Console.WriteLine("⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣄⠇⢀⢻⢃⣴⠁⠀⢨⠇⣸⠁⠀⠀⠀⠀⠀⠀⢸⠉⠲⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀          J'ai bien fait de t'amener dans ce monde !");
+        Console.WriteLine("⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡶⡈⠸⠃⡇⢰⠀⡜⢀⠇⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠙⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀         Tu est un vrai bouffon ! ");
+        Console.WriteLine("⠀⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠑⢄⠀⠀⢳⠀⠀⣸⢁⢆⡼⡡⡞⠀⠀⠀⠀⠀⠀⠀⠀⠈⣇⠀⠀⠀⠀⠈⢣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⣠⠼⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⢣⠀⣼⠰⢠⣇⠮⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡄⠀⠀⠀⠀⠀⠱⡄⠀⠀⠀⠀⠀⠀⠀⠀        ");
+        Console.WriteLine("⠀⡞⠁⠀⠈⢣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣗⠲⢤⡀⣃⣷⣡⢷⡖⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢷⢄⠀⠀⠀⠀⠀⠰⡀⠀⠀⠀⠀⠀⠀⠀       Allez je vais me montrer d'humeur charitable et t'aider !");
+        Console.WriteLine("⠰⡇⠀⠀⠀⠀⠙⢦⠀⠀⠀⠀⠀⠀⠀⠀⠸⣀⡴⠋⠁⠀⢠⠎⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠸⠀⠁⠢⡀⠀⠀⠀⠘⢄⠀⠀⠀⠀⠀⠀            Voici une petite graine de Verdichouff !");
+        Console.WriteLine("⠀⢧⠀⠀⠀⠀⠀⠀⠑⢦⡀⠀⠀⠀⠀⠀⠀⢻⡀⠀⠀⠀⢸⡠⡶⢀⡜⡰⣡⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠈⠲⣄⡀⠀⠈⠳⢄⠀⠀⠀⠀             ULTRA CHERE !!!!");
+        Console.WriteLine("⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⠙⠢⣄⠀⠀⠀⠀⠀⠳⡄⠀⠀⠘⠁⠗⠃⢿⡟⠙⣿⡈⡄⠀⠀⠀⠀⡄⡀⣰⡟⠀⠀⠀⠀⠀⠀⠈⢯⡑⠢⠄⣀⠑⠢⢀⣀      ");
+        Console.WriteLine("⠀⠀⠈⢦⡀⠀⠀⠀⠀⠀⠀⠀⠈⢿⠦⣀⠀⠀⠀⠙⢦⠀⠀⠀⠀⠀⠀⡇⠀⠐⢣⢹⡀⠀⡆⣼⣴⠗⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⠀⠀⠀⠀⠀        ");
+        Console.WriteLine("⠀⠀⠀⡜⠻⣄⠀⠀⠀⠀⠀⠀⠀⠸⡴⠚⡟⠢⢄⣀⠀⠳⣄⠀⡟⢲⠒⡇⠀⠀⠀⢑⡇⡼⠛⠉⠁⡼⢡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⠀⠀⠀⠀         Ne te soucis pour l'argent, je prend à crédit ! ");
+        Console.WriteLine("⠀⠀⢸⠁⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⢳⡀⢷⠀⠀⠈⠙⠒⠬⣿⣇⣸⡀⡇⠀⠀⢀⠏⢹⠀⠀⠀⣰⠃⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣇⠀⠀⠀⠀⠀     ");
+        Console.WriteLine("⠀⠀⢸⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠳⣸⠀⠀⠀⠀⠀⣠⠃⠀⢨⣧⡇⠀⠀⡼⠀⡟⠀⠀⢠⠇⠀⠀⠘⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢸⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠈⢧⠀⠀⠀⠀⠀⠈⢳⢦⡀⠀⠀⠀⠙⢆⠀⠀⣀⠔⠁⢀⡠⢛⣿⠀⠀⢰⠃⢀⡇⠀⠀⡞⠀⠀⠀⠀⠹⡢⢀⠀⠀⠀⠀⠀⠀⠘⣼⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⠈⢧⠉⣳⣤⣀⠀⠈⠳⣮⡥⠴⠚⠉⠀⢸⡏⠀⢀⡟⡀⢸⠁⠀⢸⠁⠀⠀⠀⠀⠀⠱⡀⠑⢤⡀⠀⠀⠀⠀⠹⡄⠀⠀⠀⠀      J");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠙⠢⣄⠀⠀⠀⠈⢿⡁⢀⡏⠑⢢⢤⣈⠳⢄⡀⠀⠀⢸⠇⠀⡼⠀⠑⢿⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⠙⣄⠀⠈⠓⠦⣄⡀⠀⠑⢄⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠙⠲⠤⣀⣀⠙⢼⡀⠀⣿⠀⠈⠉⠓⠻⠶⣄⣸⠀⢠⣧⡀⠀⠈⡇⠀⢸⠈⢲⢄⡀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠈⠉⠐⠒⠓⠄⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⡿⢷⡤⣿⢤⠀⠀⠀⠀⢀⡤⣧⣄⣼⣽⣽⠀⠀⢳⠀⠀⢳⡢⠧⠌⠒⠤⢄⣀⡀⠀⠈⠑⠤⢀⣀⣀⠠⠀⠀⠀⠀       ");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠧⡼⠧⠼⠼⠀⠀⠀⠀⢿⣰⡇⢸⡆⣹⠀⠀⠀⠸⡄⠀⢄⢹⠓⡄⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀        ");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠁⠀⠀⠀⠀⠉⠙⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+
+
+        Console.ReadKey();
+    }
     public void AfficherPotager(List<string> listActions, int action)
     {
         Console.Clear();
@@ -131,6 +168,7 @@ public class Affichage
         Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠽⠕⠋⠘⠓⠒⠲⠤⠤⠤⡖⣛⠴⠶⡲⠮⠭⢶⣭⠦⠤⠎⠀⠀⠀");
         Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         ChoixPlante(action);
+        Console.WriteLine();
         Console.WriteLine("Choisissez une plante ! ");
 
 
@@ -153,6 +191,7 @@ public class Affichage
         Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠽⠕⠋⠘⠓⠒⠲⠤⠤⠤⡖⣛⠴⠶⡲⠮⠭⢶⣭⠦⠤⠎⠀⠀⠀");
         Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         AfficherTerrain(action);
+        Console.WriteLine();
         Console.WriteLine("Choisissez un Terrain ! ");
 
 
@@ -162,10 +201,15 @@ public class Affichage
         for (int i = 0; i < 22; i++) // 22 est la taille des sprites. oui c'est pas opti mais manque de temps
 
         {
-            string un = (jeu.potagerPrincipale.terrains[0].plante != null) ? jeu.potagerPrincipale.terrains[0].plante.Sprite()[i] : "##################";
-            string deux = (jeu.potagerPrincipale.terrains[1].plante != null) ? jeu.potagerPrincipale.terrains[1].plante.Sprite()[i] : "##################";
-            string trois = (jeu.potagerPrincipale.terrains[2].plante != null) ? jeu.potagerPrincipale.terrains[2].plante.Sprite()[i] : "##################";
-            string quatre = (jeu.potagerPrincipale.terrains[3].plante != null) ? jeu.potagerPrincipale.terrains[3].plante.Sprite()[i] : "##################";
+            string un = (jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string deux = (jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string trois = (jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string quatre = (jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+
+            un += (jeu.potagerPrincipale.terrains[0].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].plante?.Sprite()[i] : "###################";
+            deux += (jeu.potagerPrincipale.terrains[1].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].plante?.Sprite()[i] : "###################";
+            trois += (jeu.potagerPrincipale.terrains[2].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].plante?.Sprite()[i] : "###################";
+            quatre += (jeu.potagerPrincipale.terrains[3].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].plante?.Sprite()[i] : "###################";
             string[] possibilite = new string[] { un, deux, trois, quatre };
             Console.WriteLine();
             for (int j = 0; j < 4; j++)
@@ -188,10 +232,15 @@ public class Affichage
         for (int i = 0; i < 22; i++) // 22 est la taille des sprites. oui c'est pas opti mais manque de temps
 
         {
-            string un = (jeu.potagerPrincipale.terrains[0].plante != null) ? jeu.potagerPrincipale.terrains[0].plante.Sprite()[i] : "                  ";
-            string deux = (jeu.potagerPrincipale.terrains[1].plante != null) ? jeu.potagerPrincipale.terrains[1].plante.Sprite()[i] : "                  ";
-            string trois = (jeu.potagerPrincipale.terrains[2].plante != null) ? jeu.potagerPrincipale.terrains[2].plante.Sprite()[i] : "                  ";
-            string quatre = (jeu.potagerPrincipale.terrains[3].plante != null) ? jeu.potagerPrincipale.terrains[3].plante.Sprite()[i] : "                  ";
+            string un = (jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string deux = (jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string trois = (jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string quatre = (jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+
+            un += (jeu.potagerPrincipale.terrains[0].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].plante?.Sprite()[i] : "                  ";
+            deux += (jeu.potagerPrincipale.terrains[1].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].plante?.Sprite()[i] : "                  ";
+            trois += (jeu.potagerPrincipale.terrains[2].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].plante?.Sprite()[i] : "                  ";
+            quatre += (jeu.potagerPrincipale.terrains[3].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].plante?.Sprite()[i] : "                  ";
             string[] possibilite = new string[] { un, deux, trois, quatre };
             Console.WriteLine();
             for (int j = 0; j < 4; j++)
@@ -214,10 +263,15 @@ public class Affichage
         for (int i = 0; i < 22; i++) // 22 est la taille des sprites. oui c'est pas opti mais manque de temps
 
         {
-            string un = (jeu.potagerPrincipale.terrains[0].plante != null) ? jeu.potagerPrincipale.terrains[0].plante.Sprite()[i] : "                  ";
-            string deux = (jeu.potagerPrincipale.terrains[1].plante != null) ? jeu.potagerPrincipale.terrains[1].plante.Sprite()[i] : "                  ";
-            string trois = (jeu.potagerPrincipale.terrains[2].plante != null) ? jeu.potagerPrincipale.terrains[2].plante.Sprite()[i] : "                  ";
-            string quatre = (jeu.potagerPrincipale.terrains[3].plante != null) ? jeu.potagerPrincipale.terrains[3].plante.Sprite()[i] : "                  ";
+            string un = (jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string deux = (jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string trois = (jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+            string quatre = (jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].animalApprivoiser?.Sprite()[i] + " " : "                    ";
+
+            un += (jeu.potagerPrincipale.terrains[0].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[0].plante?.Sprite()[i] : "                  ";
+            deux += (jeu.potagerPrincipale.terrains[1].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[1].plante?.Sprite()[i] : "                  ";
+            trois += (jeu.potagerPrincipale.terrains[2].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[2].plante?.Sprite()[i] : "                  ";
+            quatre += (jeu.potagerPrincipale.terrains[3].plante?.Sprite() != null) ? jeu.potagerPrincipale.terrains[3].plante?.Sprite()[i] : "                  ";
             Console.WriteLine($"{un} {deux} {trois} {quatre}");
         }
     }
@@ -227,10 +281,11 @@ public class Affichage
         for (int i = 0; i < listActions.Count; i++)
         {
             if (i != action)
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(listActions[i] + "\t");
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.Write("|" + listActions[i] + "|");
             Console.ForegroundColor = ConsoleColor.White;
         }
+        Console.ForegroundColor = ConsoleColor.White;
     }
     public void InfoPotager(Potager potager)
     {
@@ -243,5 +298,62 @@ public class Affichage
             i++;
         }
         Console.ReadKey();
+    }
+    public void AffichageMarchand(List<string> actionPossible, int action)
+    {
+        Console.Clear();
+        Console.WriteLine($"Semaine : {jeu.semaine}                                                                                            Mode Urgence");
+        Console.WriteLine($"Argent : {jeu.joueur.argent}                                                                                          ");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⢷⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣦⣄⣠⡤⠒⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⢾⣤⣤⣤⣴⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣿⣯⣿⣿⣿⣭⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀                 Je suis le marchand...");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀               Je vends Plein de trucs...");
+        Console.WriteLine("⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⢿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀             Enfin à ceux qui ont de l'argent...");
+        Console.WriteLine("⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⣿⣿⣿⣿⣿⣿⣿⠹⣿⣿⣿⣿⣿⣿⠟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠻⠆⠀⠀               ... ");
+        Console.WriteLine("⠀⠰⠿⠿⠿⣿⣿⣿⣿⣿⣿⡿⠀⢠⣿⣿⣿⣿⣿⣿⣿⡄⣿⣿⣿⣿⣿⣿⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⠑⠊⠙⣿⣿⣿⠿⠿⠿⠛⠃⠙⠛⣛⣿⣿⣿⣄⡸⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀               C'est à dire pas grand monde...");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⡧⣴⡾⠿⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠙⠛⠛⠛⠿⢿⣻⠶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⡿⠋⠉⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣷⢾⣍⠙⠆⢸⣿⣿⣿⣿⣿⣿⣿⡆⠀                       Les gens sont pauvre  ");
+        Console.WriteLine("⠐⠀⠴⠀⠀⠀⢹⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⡧⠴⠋⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀");
+        Console.WriteLine("⠀⠀⠦⠄⠀⠀⠀⠹⣿⣿⠿⣧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⣀⣀⠀⢀⣿⣿⣿⣿⣿⣶⣦⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⢀⣤⣴⣾⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄");
+        Console.WriteLine("⠀⠀⠀⠀⠀⢿⣽⠧⠾⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡄⠀⠀⠀⢸⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠁⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⢻⣿⠿⠛⠉⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣾⣿⣿⣿⣿⣿⠃");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⠟⠁⠀⣀⣤⠴⠛⠉⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⣿⣿⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⠟⠋⣀⣾⣋⣤⡤⠖⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⡇⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠛⠁⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⡏⢸⣿⡿⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡉⠉⠉⠉⠀⠈⠉⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀\n\n\n");
+        Console.WriteLine("Choisir une action :");
+        Menu(actionPossible, action);
+    }
+    public void VisiteurPlante(Visiteur visiteur, Terrain terrain)
+    {
+        for (int i = 0; i < 22; i++) // 22 est la taille des sprites. oui c'est pas opti mais manque de temps
+
+        {
+            Console.WriteLine($"{visiteur.Sprite()[i]} {terrain.plante?.Sprite()[i]}");
+        }
+    }
+    public void AffichageAnimalMonstre(Visiteur visiteur, Terrain terrain, List<string> listActions, int action)
+    {
+        Console.Clear();
+        Console.WriteLine($"Un {visiteur.nom} est apparue dans votre potager et menace votre {terrain.plante?.nom} !\t\t\t");
+        VisiteurPlante(visiteur, terrain);
+        Console.WriteLine("Choississez une action VITE :");
+        Menu(listActions, action);
     }
 }

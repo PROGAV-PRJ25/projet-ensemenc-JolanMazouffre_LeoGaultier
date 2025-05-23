@@ -9,6 +9,10 @@ public abstract class Visiteur
         this.terrainOccupe = terrainOccupe;
     }
     public abstract void Action();
-    public abstract void ModeReel(Joueur joueur);
+    public abstract void ModeReel(Joueur joueur, Affichage affichage);
+    public virtual string[] Sprite()
+    {
+        return [];
+    }
 
 }

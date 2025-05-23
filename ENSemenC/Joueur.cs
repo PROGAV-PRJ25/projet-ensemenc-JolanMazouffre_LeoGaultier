@@ -6,11 +6,10 @@ public class Joueur
 
     public Joueur()
     {
-        this.argent = 200;
-        potagers = [new Potager(4, 30, [new Eau(0), new GraineVerdichouffe(0)])];
+        this.argent = 100;
+        potagers = [new Potager(4, 30, [new Eau(0), new GraineVerdichouffe(0), new GraineArbreBois(0)])];
         inventaire = new Dictionary<string, Ressource> { { "Eau", new Eau(4) } };
         Ajouter(new GraineVerdichouffe(3));
-        Ajouter(new GraineArbreBois(3));
     }
     public bool DansInventaireTest(Ressource ressource)
     {

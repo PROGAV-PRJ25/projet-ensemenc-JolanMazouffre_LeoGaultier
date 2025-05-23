@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj": {}
+    "C:\\Users\\Utilisateur\\Documents\\ENSC\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ensemenc\\ENSemenC.csproj": {}
   },
   "projects": {
-    "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj": {
+    "C:\\Users\\Utilisateur\\Documents\\ENSC\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ensemenc\\ENSemenC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
+        "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\ENSC\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ensemenc\\ENSemenC.csproj",
         "projectName": "ENSemenC",
-        "projectPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\ENSemenC.csproj",
-        "packagesPath": "C:\\Users\\leogaultier\\.nuget\\packages\\",
-        "outputPath": "H:\\S6\\Programmation Avancée\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ENSemenC\\obj\\",
+        "projectPath": "C:\\Users\\Utilisateur\\Documents\\ENSC\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ensemenc\\ENSemenC.csproj",
+        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Utilisateur\\Documents\\ENSC\\projet-ensemenc-JolanMazouffre_LeoGaultier\\ensemenc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leogaultier\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

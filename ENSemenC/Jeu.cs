@@ -7,6 +7,7 @@ public class Jeu
     public Joueur joueur;
     public int semaine;
     public Potager potagerPrincipale; // cette variable porte ce nom car il etait initalement prévu de faire un jeu avec plusieurs potager, mais les contraintes de temps nous ont obligé à ne pas le faire
+
     public Jeu()
     {
         affichage = new Affichage(this);
@@ -16,7 +17,7 @@ public class Jeu
     }
     public void Jouer()
     {
-        Console.WriteLine("Pour une experience optimale veuillez aggrandir votre fenetre de console");
+        Console.WriteLine("Pour une experience optimale veuillez aggrandir votre fenetre de console au maximum !!!");
         Console.WriteLine("Appuyer sur une touche pour continuer");
         Console.ReadKey();
         affichage.AffichierTitre();
@@ -30,6 +31,7 @@ public class Jeu
     public void PasserSemaine()
     {
         MenuClassique();
+        TestBloque();
         foreach (Potager potager in joueur.potagers)
         {
             SemainePotager(potager);
@@ -42,9 +44,64 @@ public class Jeu
     {
         foreach (Terrain terrain in potager.terrains)
         {
+
+            terrain.animalApprivoiser?.Aide();
             terrain.plante?.CalculeCroissance();
             terrain.plante?.Boire();
             potager.CheckMorts();
+        }
+    }
+    public void MenuCraft()
+    {
+        bool dansMenu = true;
+        int recette = 0;
+        List<string> actionPossible = ["Abajour", "Bulbe Lumineux", "Bulbe Explosif"];
+        while (dansMenu)
+        {
+            affichage.AfficherPotager(actionPossible, recette);
+            ConsoleKeyInfo input = Console.ReadKey();
+            switch (input.Key)
+            {
+                case ConsoleKey.RightArrow:
+
+                    if (recette + 1 >= actionPossible.Count)
+                    {
+                        recette = 0;
+                    }
+                    else
+                    {
+                        recette += 1;
+                    }
+                    break;
+
+                case ConsoleKey.LeftArrow:
+                    if (recette - 1 < 0)
+                    {
+                        recette = actionPossible.Count - 1;
+                    }
+                    else
+                    {
+                        recette -= 1;
+                    }
+                    break;
+                case ConsoleKey.Enter:
+                    switch (actionPossible[recette])
+                    {
+                        case "Abajour":
+                            new RecetteAbajour().Craft(joueur);
+                            break;
+                        case "Bulbe Explosif":
+                            new RecetteBulbeExplosif().Craft(joueur);
+                            break;
+                        case "Bulbe Lumineux":
+                            new RecetteBulbeLumineux().Craft(joueur);
+                            break;
+                    }
+                    break;
+                case ConsoleKey.Backspace:
+                    dansMenu = false;
+                    break;
+            }
         }
     }
     public void MenuArroser()
@@ -230,10 +287,7 @@ public class Jeu
         }
         foreach (Graine graineDispo in grainesDispo)
         {
-            if (graineDispo.quantite > 0)
-            {
-                nomGrainesDispo.Add(graineDispo.nom);
-            }
+            nomGrainesDispo.Add(graineDispo.nom);
         }
         bool dansMenu = true;
         int graine = 0;
@@ -287,7 +341,7 @@ public class Jeu
         int action = 0;
         while (dansMenu)
         {
-            List<string> actionPossible = ["Passer Semaine", "Arroser Plante", "Planter", "Info Joueur", "Recolter", "info Potager"];
+            List<string> actionPossible = ["Passer Semaine", "Arroser Plante", "Planter", "Recolter", "Crafter", "Info Joueur", "info Potager"];
             affichage.AfficherPotager(actionPossible, action);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
@@ -337,6 +391,9 @@ public class Jeu
                         case "info Potager":
                             affichage.InfoPotager(potagerPrincipale);
                             break;
+                        case "Crafter":
+                            MenuCraft();
+                            break;
                     }
                     break;
             }
@@ -377,7 +434,7 @@ public class Jeu
             if (rng.Next(0, 101) < potager.chanceVisite)
             {
                 Visiteur visiteur = VisiteurAleatoire(potager);
-                visiteur.ModeReel(joueur);
+                visiteur.ModeReel(joueur, affichage);
             }
         }
 
@@ -407,11 +464,7 @@ public class Jeu
         }
         if (bloque)
         {
-            Console.Clear();
-            Console.WriteLine("Il semblerait que vous avez pris des mauvaise décision vous êtes désormais bloqué ! \n",
-                              "Ni plante, ni graine, aucun marchand ne sera attiré par votre potager !\n",
-                              "Pour vous sauvez, voici une Graine de Verdichouffe à 50 gold au lieu de 35 :");
-            Console.ReadKey();
+            affichage.Bloque();
             joueur.argent -= 50;
             joueur.Ajouter(new GraineVerdichouffe(1));
         }

@@ -11,9 +11,9 @@ public class Marchand : Visiteur
     {
 
     }
-    public override void ModeReel(Joueur joueur)
+    public override void ModeReel(Joueur joueur, Affichage affichage)
     {
-        MenuMarchand(joueur);
+        MenuMarchand(joueur, affichage);
     }
     public int ChoixQuantite(Ressource ressource, Joueur joueur, int max)
     {
@@ -22,7 +22,7 @@ public class Marchand : Visiteur
         while (dansMenu)
         {
             Console.Clear();
-            Console.WriteLine($"Combien de {ressource.nom} voulez vous ? Pressez supprimer pour annuler");
+            Console.WriteLine($"Choissiez la quantité de {ressource.nom} ! Pressez supprimer pour annuler");
             Console.WriteLine(n);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
@@ -44,20 +44,66 @@ public class Marchand : Visiteur
         }
         return 0;
     }
-
-    public void MenuMarchand(Joueur joueur)
+    public void MenuMarchand(Joueur joueur, Affichage affichage)
     {
         bool dansMenu = true;
         int action = 0;
+        List<string> actionPossible = ["acheter", "vendre", "sortir"];
         while (dansMenu)
         {
-            Console.Clear();
-            Console.WriteLine($"Un marchand rend visite à votre potager\tAppuyer sur la touche supprimer pour sortir du magasin\n Appuyer sur flèche haut pour vendre des item");
-            foreach (Ressource ressource in magasin)
+            affichage.AffichageMarchand(actionPossible, action);
+            ConsoleKeyInfo input = Console.ReadKey();
+            switch (input.Key)
             {
-                Console.WriteLine(ressource);
+                case ConsoleKey.RightArrow:
+
+                    if (action + 1 >= actionPossible.Count)
+                    {
+                        action = 0;
+                    }
+                    else
+                    {
+                        action += 1;
+                    }
+                    break;
+
+                case ConsoleKey.LeftArrow:
+                    if (action - 1 < 0)
+                    {
+                        action = actionPossible.Count - 1;
+                    }
+                    else
+                    {
+                        action -= 1;
+                    }
+                    break;
+                case ConsoleKey.Enter:
+                    if (action == 0)
+                        MenuAchat(joueur, affichage);
+                    else if (action == 1)
+                        MenuVendre(joueur, affichage);
+                    else
+                        dansMenu = false;
+                    break;
+                case ConsoleKey.Backspace:
+                    dansMenu = false;
+                    break;
+
             }
-            Console.WriteLine(magasin[action]);
+        }
+    }
+    public void MenuAchat(Joueur joueur, Affichage affichage)
+    {
+        bool dansMenu = true;
+        int action = 0;
+        List<string> stringMagasin = [];
+        foreach (Ressource ressource in magasin)
+        {
+            stringMagasin.Add(ressource.ToString());
+        }
+        while (dansMenu)
+        {
+            affichage.AffichageMarchand(stringMagasin, action);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
             {
@@ -90,9 +136,6 @@ public class Marchand : Visiteur
                     joueur.argent -= magasin[action].prixAchat * n;
                     joueur.Ajouter(magasin[action]);
                     break;
-                case ConsoleKey.UpArrow:
-                    MenuVendre(joueur);
-                    break;
                 case ConsoleKey.Backspace:
                     dansMenu = false;
                     break;
@@ -100,7 +143,7 @@ public class Marchand : Visiteur
             }
         }
     }
-    public void MenuVendre(Joueur joueur)
+    public void MenuVendre(Joueur joueur, Affichage affichage)
     {
         List<string> keyInventaire = [];
         foreach (KeyValuePair<string, Ressource> ressource in joueur.inventaire)
@@ -111,13 +154,7 @@ public class Marchand : Visiteur
         int action = 0;
         while (dansMenu)
         {
-            Console.Clear();
-            Console.WriteLine($"Vous être en train de vendre des items. \t Appuyer sur supprimer pour revenir au menu d'achat");
-            foreach (KeyValuePair<string, Ressource> ressource in joueur.inventaire)
-            {
-                Console.WriteLine($"{ressource.Value.nom} gain : {ressource.Value.prixVente}");
-            }
-            Console.WriteLine(keyInventaire[action]);
+            affichage.AffichageMarchand(keyInventaire, action);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
             {
@@ -147,6 +184,10 @@ public class Marchand : Visiteur
                     int n = ChoixQuantite(joueur.inventaire[keyInventaire[action]], joueur, joueur.inventaire[keyInventaire[action]].quantite);
                     joueur.inventaire[keyInventaire[action]].quantite -= n;
                     joueur.argent += n * joueur.inventaire[keyInventaire[action]].prixVente;
+                    Console.Clear();
+                    Console.WriteLine($"Vous avez vendu {n} {keyInventaire[action]}");
+                    Console.WriteLine($"Cela vous a rapporté {n * joueur.inventaire[keyInventaire[action]].prixVente} d'argent");
+                    Console.ReadKey();
                     break;
                 case ConsoleKey.Backspace:
                     dansMenu = false;
