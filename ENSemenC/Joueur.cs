@@ -10,6 +10,7 @@ public class Joueur
         potagers = [new Potager(4, 30, [new Eau(0), new GraineVerdichouffe(0)])];
         inventaire = new Dictionary<string, Ressource> { { "Eau", new Eau(4) } };
         Ajouter(new GraineVerdichouffe(3));
+        Ajouter(new GraineArbreBois(3));
     }
     public bool DansInventaireTest(Ressource ressource)
     {
@@ -45,7 +46,14 @@ public class Joueur
             if (terrain.plante.RecoltePret())
             {
                 Ajouter(terrain.plante.fruit);
-                terrain.plante = null;
+                if (terrain.plante.vivace) // si la plante est vivace elle revient à son état avant la recolte possible, sinon elle est détruite 
+                {
+                    terrain.plante.temps = terrain.plante.tempsDeCroissance[terrain.plante.tempsDeCroissance.Length - 2];
+                }
+                else
+                {
+                    terrain.plante = null;
+                }
             }
         }
     }
@@ -59,7 +67,7 @@ public class Joueur
         string message = $"Argent: {argent} ";
         foreach (KeyValuePair<string, Ressource> ressource in inventaire)
         {
-            message += $"| {ressource.Key}, amount: {ressource.Value.quantite} ";
+            message += $"| {ressource.Key}, quantité: {ressource.Value.quantite}\n ";
         }
         return message;
     }

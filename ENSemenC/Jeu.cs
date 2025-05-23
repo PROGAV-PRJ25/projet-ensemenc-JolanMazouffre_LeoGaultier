@@ -3,17 +3,25 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Jeu
 {
+    public Affichage affichage;
     public Joueur joueur;
     public int semaine;
-    public Potager potagerPrincipale;
+    public Potager potagerPrincipale; // cette variable porte ce nom car il etait initalement prévu de faire un jeu avec plusieurs potager, mais les contraintes de temps nous ont obligé à ne pas le faire
     public Jeu()
     {
+        affichage = new Affichage(this);
         joueur = new Joueur();
         semaine = 1;
         potagerPrincipale = joueur.potagers[0];
     }
     public void Jouer()
     {
+        Console.WriteLine("Pour une experience optimale veuillez aggrandir votre fenetre de console");
+        Console.WriteLine("Appuyer sur une touche pour continuer");
+        Console.ReadKey();
+        affichage.AffichierTitre();
+        affichage.AfficherIntro();
+        affichage.AfficherExplication();
         while (true)
         {
             PasserSemaine();
@@ -44,24 +52,18 @@ public class Jeu
 
         bool dansMenu = true;
         int plante = 0;
+        List<int> possibiliter = potagerPrincipale.RecupeTerrainOccupe();
         if (potagerPrincipale.RecupeTerrainOccupe().Count > 0)
         {
             while (dansMenu)
             {
-                Console.Clear();
-                Console.WriteLine($"semaine {semaine}: {potagerPrincipale}");
-                foreach (Terrain terrain in potagerPrincipale.terrains)
-                {
-                    Console.WriteLine(terrain.plante);
-                }
-                Console.WriteLine("Arroser Plante");
-                Console.WriteLine($"{potagerPrincipale.RecupeTerrainOccupe()[plante]}");
+                affichage.ChoixPotager(possibiliter[plante]);
                 ConsoleKeyInfo input = Console.ReadKey();
                 switch (input.Key)
                 {
                     case ConsoleKey.RightArrow:
 
-                        if (plante + 1 >= potagerPrincipale.RecupeTerrainOccupe().Count)
+                        if (plante + 1 >= possibiliter.Count)
                         {
                             plante = 0;
                         }
@@ -74,7 +76,7 @@ public class Jeu
                     case ConsoleKey.LeftArrow:
                         if (plante - 1 < 0)
                         {
-                            plante = potagerPrincipale.RecupeTerrainOccupe().Count - 1;
+                            plante = possibiliter.Count - 1;
                         }
                         else
                         {
@@ -85,7 +87,7 @@ public class Jeu
                         dansMenu = false;
                         if (joueur.inventaire["Eau"].quantite > 0)
                         {
-                            joueur.Arroser(potagerPrincipale.RecupeTerrainOccupe()[plante]);
+                            joueur.Arroser(potagerPrincipale.terrains[possibiliter[plante]]);
                         }
                         else
                         {
@@ -112,24 +114,18 @@ public class Jeu
 
         bool dansMenu = true;
         int plante = 0;
+        List<int> possibiliter = potagerPrincipale.RecupeTerrainOccupe();
         if (potagerPrincipale.RecupeTerrainOccupe().Count > 0)
         {
             while (dansMenu)
             {
-                Console.Clear();
-                Console.WriteLine($"semaine {semaine}: {potagerPrincipale}");
-                foreach (Terrain terrain in potagerPrincipale.terrains)
-                {
-                    Console.WriteLine(terrain.plante);
-                }
-                Console.WriteLine("Recolter");
-                Console.WriteLine($"{potagerPrincipale.RecupeTerrainOccupe()[plante]}");
+                affichage.ChoixTerrain(possibiliter[plante]);
                 ConsoleKeyInfo input = Console.ReadKey();
                 switch (input.Key)
                 {
                     case ConsoleKey.RightArrow:
 
-                        if (plante + 1 >= potagerPrincipale.RecupeTerrainOccupe().Count)
+                        if (plante + 1 >= possibiliter.Count)
                         {
                             plante = 0;
                         }
@@ -142,7 +138,7 @@ public class Jeu
                     case ConsoleKey.LeftArrow:
                         if (plante - 1 < 0)
                         {
-                            plante = potagerPrincipale.RecupeTerrainOccupe().Count - 1;
+                            plante = possibiliter.Count - 1;
                         }
                         else
                         {
@@ -151,7 +147,7 @@ public class Jeu
                         break;
                     case ConsoleKey.Enter:
                         dansMenu = false;
-                        joueur.Recolter(potagerPrincipale.RecupeTerrainOccupe()[plante]);
+                        joueur.Recolter(potagerPrincipale.terrains[possibiliter[plante]]);
                         break;
                     case ConsoleKey.Backspace:
                         dansMenu = false;
@@ -171,24 +167,18 @@ public class Jeu
 
         bool dansMenu = true;
         int plante = 0;
+        List<int> possibiliter = potagerPrincipale.RecupeTerrainLibre();
         if (potagerPrincipale.RecupeTerrainLibre().Count > 0)
         {
             while (dansMenu)
             {
-                Console.Clear();
-                Console.WriteLine($"semaine {semaine}: {potagerPrincipale}");
-                foreach (Terrain terrain in potagerPrincipale.terrains)
-                {
-                    Console.WriteLine(terrain.plante);
-                }
-                Console.WriteLine("Planter");
-                Console.WriteLine($"{potagerPrincipale.RecupeTerrainLibre()[plante]}");
+                affichage.ChoixTerrain(possibiliter[plante]);
                 ConsoleKeyInfo input = Console.ReadKey();
                 switch (input.Key)
                 {
                     case ConsoleKey.RightArrow:
 
-                        if (plante + 1 >= potagerPrincipale.RecupeTerrainLibre().Count)
+                        if (plante + 1 >= possibiliter.Count)
                         {
                             plante = 0;
                         }
@@ -201,7 +191,7 @@ public class Jeu
                     case ConsoleKey.LeftArrow:
                         if (plante - 1 < 0)
                         {
-                            plante = potagerPrincipale.RecupeTerrainLibre().Count - 1;
+                            plante = possibiliter.Count - 1;
                         }
                         else
                         {
@@ -209,12 +199,12 @@ public class Jeu
                         }
                         break;
                     case ConsoleKey.Enter:
-                        Graine? graineChoisie = MenuGraine(potagerPrincipale.RecupeTerrainLibre()[plante]);
+                        Graine? graineChoisie = MenuGraine(potagerPrincipale.terrains[possibiliter[plante]]);
                         if (graineChoisie != null)
                         {
                             dansMenu = false;
                             graineChoisie.quantite -= 1;
-                            joueur.Planter(potagerPrincipale.RecupeTerrainLibre()[plante], graineChoisie.nomPlante);
+                            joueur.Planter(potagerPrincipale.terrains[possibiliter[plante]], graineChoisie.nomPlante);
                         }
                         break;
                     case ConsoleKey.Backspace:
@@ -233,23 +223,23 @@ public class Jeu
     public Graine? MenuGraine(Terrain terrainChoisie)
     {
         List<Graine> grainesDispo = [];
+        List<string> nomGrainesDispo = [];
         foreach (KeyValuePair<string, Ressource> item in joueur.inventaire)
         {
             item.Value.ActionGraine(grainesDispo);
+        }
+        foreach (Graine graineDispo in grainesDispo)
+        {
+            if (graineDispo.quantite > 0)
+            {
+                nomGrainesDispo.Add(graineDispo.nom);
+            }
         }
         bool dansMenu = true;
         int graine = 0;
         while (dansMenu)
         {
-            Console.Clear();
-            Console.WriteLine($"semaine {semaine}: {potagerPrincipale}");
-            foreach (Terrain terrain in potagerPrincipale.terrains)
-            {
-                Console.WriteLine(terrain.plante);
-            }
-            Console.WriteLine("Planter");
-            Console.WriteLine(terrainChoisie);
-            Console.WriteLine($"{grainesDispo[graine]}");
+            affichage.AfficherPotager(nomGrainesDispo, graine);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
             {
@@ -297,20 +287,14 @@ public class Jeu
         int action = 0;
         while (dansMenu)
         {
-            Console.Clear();
-            string[] actionPossible = ["Passer Semaine", "Arroser Plante", "Planter", "Info Joueur", "Recolter"];
-            Console.WriteLine($"semaine {semaine}: {potagerPrincipale}");
-            foreach (Terrain terrain in potagerPrincipale.terrains)
-            {
-                Console.WriteLine(terrain.plante);
-            }
-            Console.WriteLine(actionPossible[action]);
+            List<string> actionPossible = ["Passer Semaine", "Arroser Plante", "Planter", "Info Joueur", "Recolter", "info Potager"];
+            affichage.AfficherPotager(actionPossible, action);
             ConsoleKeyInfo input = Console.ReadKey();
             switch (input.Key)
             {
                 case ConsoleKey.RightArrow:
 
-                    if (action + 1 >= actionPossible.Length)
+                    if (action + 1 >= actionPossible.Count)
                     {
                         action = 0;
                     }
@@ -323,7 +307,7 @@ public class Jeu
                 case ConsoleKey.LeftArrow:
                     if (action - 1 < 0)
                     {
-                        action = actionPossible.Length - 1;
+                        action = actionPossible.Count - 1;
                     }
                     else
                     {
@@ -349,6 +333,9 @@ public class Jeu
                             Console.Clear();
                             Console.WriteLine(joueur.ToString());
                             Console.ReadKey();
+                            break;
+                        case "info Potager":
+                            affichage.InfoPotager(potagerPrincipale);
                             break;
                     }
                     break;

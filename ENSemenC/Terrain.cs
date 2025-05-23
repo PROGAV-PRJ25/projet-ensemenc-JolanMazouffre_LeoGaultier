@@ -23,11 +23,14 @@ public class Terrain
             case "Verdichouffe":
                 plante = new Verdichouffe(eauBase, lumiereBase);
                 break;
+            case "Arbre a Bois":
+                plante = new ArbreBois(eauBase, lumiereBase);
+                break;
 
         }
     }
     public override string ToString()
     {
-        return (plante == null) ? $"{type}/vide" : $"{type}/{plante.nom}";
+        return (plante == null) ? $"{type}" : $"{type}/{plante.nom}";
     }
 }

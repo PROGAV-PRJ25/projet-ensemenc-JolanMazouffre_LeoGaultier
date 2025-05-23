@@ -4,9 +4,9 @@ using System.Security.Cryptography.X509Certificates;
 public abstract class Plantes
 {
     public string nom;
-    protected bool vivace;
+    public bool vivace;
     public double temps;
-    protected int[] tempsDeCroissance;
+    public int[] tempsDeCroissance;
     protected int tempsMax;
     protected int vitesseBoire; //Les plantes vont boires l'eau à une certaine vitesse
     protected int eau;
@@ -16,7 +16,6 @@ public abstract class Plantes
     protected string[] attributPref;
     protected bool malade;
     public Ressource fruit;
-    public Ressource? loot;
 
     public int Eau
     {
@@ -52,7 +51,7 @@ public abstract class Plantes
     }
 
 
-    public Plantes(string nom, bool vivace, int[] tempsDeCroissance, int tempsMax, int vitesseBoire, int soif, int soifMin, int lumiere, int lumiereMin, string[] attributPref, Ressource fruit, Ressource? loot)
+    public Plantes(string nom, bool vivace, int[] tempsDeCroissance, int tempsMax, int vitesseBoire, int soif, int soifMin, int lumiere, int lumiereMin, string[] attributPref, Ressource fruit)
     {
         temps = 0;
         this.vitesseBoire = vitesseBoire;
@@ -68,7 +67,6 @@ public abstract class Plantes
         this.attributPref = attributPref;
         malade = false;
         this.fruit = fruit;
-        this.loot = loot;
 
     }
     public void Arroser(int Value)
@@ -137,4 +135,5 @@ public abstract class Plantes
         else
             return true;
     }
+    public abstract string[] Sprite();
 }
