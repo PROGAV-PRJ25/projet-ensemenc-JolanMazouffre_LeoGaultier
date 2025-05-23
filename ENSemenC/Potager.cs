@@ -40,26 +40,26 @@ public class Potager
         }
 
     }
-    public List<Terrain> RecupeTerrainLibre()
+    public List<int> RecupeTerrainLibre()
     {
-        List<Terrain> retour = [];
-        foreach (Terrain terrain in terrains)
+        List<int> retour = [];
+        for (int i = 0; i < terrains.Count; i++)
         {
-            if (terrain.plante == null)
+            if (terrains[i].plante == null)
             {
-                retour.Add(terrain);
+                retour.Add(i);
             }
         }
         return retour;
     }
-    public List<Terrain> RecupeTerrainOccupe()
+    public List<int> RecupeTerrainOccupe()
     {
-        List<Terrain> retour = [];
-        foreach (Terrain terrain in terrains)
+        List<int> retour = [];
+        for (int i = 0; i < terrains.Count; i++)
         {
-            if (terrain.plante != null)
+            if (terrains[i].plante != null)
             {
-                retour.Add(terrain);
+                retour.Add(i);
             }
         }
         return retour;
